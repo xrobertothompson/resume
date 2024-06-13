@@ -1,4 +1,4 @@
-// Plurality Voting System, By Roberto Thompson
+// Plurality Voting System, By Roberto Thompson,  with the help of distribution code from the CS50x Program
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
