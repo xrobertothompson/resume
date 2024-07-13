@@ -1,4 +1,4 @@
-// DNA Profiling Program, By Roberto Thompson, with the help of distribution code from the CS50x Program
+# DNA Profiling Program, By Roberto Thompson, with the help of distribution code from the CS50x Program
 import csv
 import sys
 
