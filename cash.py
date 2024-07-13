@@ -1,4 +1,4 @@
-// Coin Change Calculator, By Roberto Thompson
+# Coin Change Calculator, By Roberto Thompson
 from cs50 import get_float
 
 # prompts the user
