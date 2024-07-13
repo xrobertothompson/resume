@@ -1,4 +1,4 @@
-// Credit Card Checker & Validator, By Roberto Thompson
+# Credit Card Checker & Validator, By Roberto Thompson
 from cs50 import get_int
 
 while True:
