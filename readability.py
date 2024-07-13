@@ -1,4 +1,4 @@
-// Reading Level Analyzer, By Roberto Thompson
+# Reading Level Analyzer, By Roberto Thompson
 from cs50 import get_string
 
 # main function
