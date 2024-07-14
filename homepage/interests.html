@@ -1,0 +1,61 @@
+<!-- My Interests Page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Roberto's Interests</title>
+        <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.getElementById("aboutme").onclick = function() {
+                window.location.href = "https://reimagined-doodle-q7vwj7pj6jpr2x9gq-8080.app.github.dev/homepage/index.html"
+            }
+
+            document.getElementById("awardachievements").onclick = function() {
+                window.location.href = "https://reimagined-doodle-q7vwj7pj6jpr2x9gq-8080.app.github.dev/homepage/aa.html"
+            }
+
+            document.getElementById("cantlivewithout").onclick = function() {
+                window.location.href = "https://reimagined-doodle-q7vwj7pj6jpr2x9gq-8080.app.github.dev/homepage/clw.html"
+            }
+
+
+
+        });
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1><span class="bold">Roberto</span></h1>
+        </div>
+
+        <div class="section">
+            <button id = "aboutme"><span class="rbold"> About Me</span></button>
+            <button id = "awardachievements"><span class="rbold"> Awards & Achievements</span></button>
+            <button id = "cantlivewithout"><span class="rbold"> 3 Things I Can't Live Without</span></button>
+            <button id = "interests"><span class="rbold"> My Interests</span></button>
+        </div>
+        <div class = "header2">
+            <h2> My Interests</h2>
+            <br>
+            <h3 class="blackandwhite">Content Creation:</h3>
+            <p> From as young as I can remember, I remember making a YouTube channel and making videos, to this day I create content mainly on TikTok and YouTube Shorts</p>
+            <br>
+            <img src="assets/yt.jpg" class="responsive-imageb">
+            <br><br>
+            <p2 class = "italic">My YouTube channel homepage as of July 2024</p2>
+            <br><br>
+            <h3 class="blackandwhite">Weightlifting:</h3>
+            <p>As of the summer of 2023, I've starting lifting weights at the gym, and kept going ever since!</p>
+            <br>
+            <img src="assets/gym.jpg" class="responsive-image">
+            <br><br>
+            <p2 class="italic">Me flexing after hitting a workout in my home gym.</p2>
+        </div>
+    </body>
+</html>
