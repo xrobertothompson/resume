@@ -1,0 +1,145 @@
+.header {
+    background-color: "white";
+    color: "black";
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+button, input[type="submit"] {
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+    margin: 0 30px;
+    margin-top: -55px;
+    border: 2px solid black;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.rbold {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.header2 {
+    background-color: "white";
+    color: "black";
+    margin: 0 30px;
+    text-align: left;
+}
+
+.responsive-image {
+    max-width: 20%;
+    height: auto;
+}
+
+.responsive-image2 {
+    max-width: 15%;
+    height: auto;
+}
+
+.responsive-imageb {
+    max-width: 40%;
+    height: auto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.greenandblue {
+    color: #008000;
+    font-weight: bold;
+    text-shadow: -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    -3px 0 0 #000,
+    3px 0 0 #000,
+    0 -3px 0 #000,
+    0 3px 0 #000;
+}
+
+.blueblack {
+    color: #ADD8E6;
+    font-weight: bold;
+    text-shadow: -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    -3px 0 0 #000,
+    3px 0 0 #000,
+    0 -3px 0 #000,
+    0 3px 0 #000;
+}
+
+.brownandblack {
+    color: #964B00;
+    font-weight: bold;
+    text-shadow: -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    -3px 0 0 #000,
+    3px 0 0 #000,
+    0 -3px 0 #000,
+    0 3px 0 #000;
+}
+
+.blackandwhite {
+    color: #000000;
+    font-weight: bold;
+    text-shadow: -3px -3px 0 #808080,
+    3px -3px 0 #808080,
+    -3px 3px 0 #808080,
+    3px 3px 0 #808080,
+    -3px 0 0 #808080,
+    3px 0 0 #808080,
+    0 -3px 0 #808080,
+    0 3px 0 #808080;
+}
+
+.redandblack {
+    color: #FF7F7F;
+    font-weight: bold;
+    text-shadow: -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000,
+    -3px 0 0 #000,
+    3px 0 0 #000,
+    0 -3px 0 #000,
+    0 3px 0 #000;
+}
+
+
