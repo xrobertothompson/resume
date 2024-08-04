@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips
+{% endblock %}
+
+{% block main %}
+    <body>
+        <img src="{{ url_for('static', filename='assets/bgitinerary.jpg') }}" class="itinerarygenbg">
+        <div class="center-line"></div>
+        <div class="mid-line"></div>
+        {% include 'map.html' %}
+        <div id="content">
+            <!-- Include the rendered planner content -->
+            {{ planner_content|safe }}
+        </div>
+        <h1 class="nums">1: Destination Selection & Budgeting</h1>
+        <p class="bodytut">The first and most crucial part of planning a trip is the destination and planning part;<br>without considering these, you might find yourself unsure of where you want to travel.<br> Once you have a destination in mind, it's important to research the best time to visit,<br>local attractions, and any necessary travel documents. Creating a detailed itinerary<br>that includes accommodation, transportation, and activities can help ensure a smooth<br>and enjoyable trip. Additionally, budgeting for your trip and planning for unexpected<br>expenses will allow you to make the most of your travel experience. Remember,<br>thorough preparation is key to a successful adventure! </p>
+    <div class="cheapnumlist">
+        <p class="listcheap">Top 5 Cheapest Countries:</p>
+        <ol class="numbered-listcheap">
+            <li>India</li>
+            <li>Vietnam</li>
+            <li>Thailand</li>
+            <li>Mexico</li>
+            <li>Philippines</li>
+        </ol>
+    </div>
+    <div class="expensivenumlist">
+        <p class="listexpensive">Top 5 Most Expensive Countries</p>
+        <ol class="numbered-listexpensive">
+            <li>Switzerland</li>
+            <li>Norway</li>
+            <li>Iceland</li>
+            <li>Singapore</li>
+            <li>Hong Kong</li>
+        </ol>
+    </div>
+    <div class="ecofriendlynumlist">
+        <p class="listecofriendly">Top 5 Most Eco-Friendly Countries</p>
+        <ol class="numbered-listecofriendly">
+            <li>Sweden</li>
+            <li>Denmark</li>
+            <li>Norway</li>
+            <li>Switzerland</li>
+            <li>Finland</li>
+        </ol>
+    </div>
+        <button id="nexttips" class="nexttipsbook">Next</button>
+    <script>
+        document.getElementById("nexttips").onclick = function() {
+            window.location.href = "{{ url_for('tipscont') }}"
+        }
+    </script>
+    </body>
+{% endblock %}

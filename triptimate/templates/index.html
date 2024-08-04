@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div>
+    <img src="{{ url_for('static', filename='assets/bkhp.jpg') }}" class="imgbghome">
+</div>
+<div>
+    <p class="hometrip">Triptimate</p>
+    <img src="{{ url_for('static', filename='assets/triptimatep.png') }}" class="triptimatepich">
+    <p class="txthome">Traveling cheap and sustainably couldn't have been easier.</p>
+    <input type="email" id="emailInput" class="singleLine" placeholder="Enter Your Email Here" required>
+    <button id="getstarted" class="homegetstarted">Get Started</button>
+    <script>
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+        document.getElementById('getstarted').addEventListener('click', function() {
+            var email = document.getElementById('emailInput').value;
+            if (validateEmail(email)) {
+                window.location.href = "{{ url_for('register') }}?email=" + encodeURIComponent(email);
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</div>
+{% endblock %}

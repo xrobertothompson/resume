@@ -1,0 +1,38 @@
+{% extends "layoutauth.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div>
+    <form method="POST">
+        <button id="back" class="backbutton" type="button">Back</button>
+        <img src="{{ url_for('static', filename='assets/registerpic.png') }}" class="registerpic">
+        <p class="registertxt">REGISTER</p>
+        <p class="registerinfotxt">Travel sustainably, and affordably today!</p>
+        <input type="email" name="email" id="regEmailInput" class="regemail" placeholder="Email" required>
+        <input type="password" name="password" id="regPasswordInput" class="regpassword" placeholder="Password" required>
+        <input type="password" name="confirmation" id="regPasswordConfirmationInput" class="regpasswordconfirm" placeholder="Confirm Password" required>
+        <button type="submit" id="registernow" class="registernowbutton">Register Now</button>
+    </form>
+    <p class="tologin">Have an Account?<span class="loginlink" id="tologinpage"> Login Here.</span></p>
+    <script>
+        document.getElementById("back").onclick = function() {
+            window.location.href = "{{ url_for('index') }}"
+        }
+
+        document.getElementById("tologinpage").onclick = function() {
+            window.location.href = "{{ url_for('login') }}"
+        }
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+            if (email) {
+                document.getElementById('regEmailInput').value = email;
+            }
+        }
+    </script>
+</div>
+{% endblock %}

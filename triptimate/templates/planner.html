@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="planner-container">
+        <h1 class="plannerheadtxt">Your Travel Planner</h1>
+        <button id="createnewid" class="createnew">Create New</button>
+        <div class="mid-lineplanner"></div>
+    
+        <!-- Display travel plans -->
+        <div class="travel-plans">
+            {% for plan in plans %}
+            <div class="plan">
+                <p>From: {{ plan['origin'] }}</p>
+                <p>Destination: {{ plan['destination'] }}</p>
+                <p>Budget: {{ plan['budget'] }}</p>
+                <p># of Travelers: {{ plan['num_travelers'] }}</p>
+                <p>Departure: {{ plan['departure_date'] }}</p>
+                <p>Return: {{ plan['return_date'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function attachCreateNewButtonEvent() {
+                document.getElementById("createnewid").addEventListener('click', function() {
+                    fetch("{{ url_for('create') }}")
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content').innerHTML = html;
+                            attachDoneButtonEvent();
+                        })
+                        .catch(error => console.error('Error fetching create:', error));
+                });
+            }
+        
+            function attachDoneButtonEvent() {
+                document.getElementById("done").onclick = function() {
+                    fetch("{{ url_for('planner') }}")
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content').innerHTML = html;
+                            attachCreateNewButtonEvent(); // Reattach the create new button event
+                        })
+                        .catch(error => console.error('Error fetching planner:', error));
+                }
+            }
+        
+            // Initial event attachment
+            attachCreateNewButtonEvent();
+        });
+    </script>
+</body>
+</html>

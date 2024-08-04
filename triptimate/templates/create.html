@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Edit Your Planner</title>
+</head>
+<body>
+    <div class="planner-container">
+        <h1 class="createheadtxt">Edit Your Planner</h1>
+        <form action="{{ url_for('create') }}" method="post">
+            <button id="done" class="donebtn" type="button">Back</button>
+            <div class="mid-lineplanner"></div>
+
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from">
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination">
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Budget:</label>
+                <select id="budget" name="budget">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Less than $500">Less than $500</option>
+                    <option value="$500 - $1500">$500 - $1500</option>
+                    <option value="$1500 - $3000">$1500 - $3000</option>
+                    <option value="$3000 - $6000">$3000 - $6000</option>
+                    <option value="More than $6000">More than $6000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="travelers"># of Travelers:</label>
+                <select id="travelers" name="travelers">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="More than 4">More than 4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure">
+            </div>
+
+            <div class="form-group">
+                <label for="return">Return:</label>
+                <input type="text" id="return" name="return">
+            </div>
+
+            <input type="submit" value="Submit" id="submit" class="submitbtn">
+        </form>
+    </div>
+    <script>
+        document.getElementById("done").addEventListener('click', function() {
+            // Redirect to a URL that does not show old data
+            window.location.href = "{{ url_for('planner') }}";
+        });
+    </script>
+</body>
+</html>

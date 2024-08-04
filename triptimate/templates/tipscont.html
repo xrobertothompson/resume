@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips
+{% endblock %}
+
+{% block main %}
+    <body>
+        <img src="{{ url_for('static', filename='assets/bgitinerary.jpg') }}" class="itinerarygenbg">
+        <div class="center-line"></div>
+        <div class="mid-line"></div>
+        {% include 'map.html' %}
+        {% include 'planner.html' %}
+        <div id="content">
+            <!-- Include the rendered planner content -->
+            {{ planner_content|safe }}
+        </div>
+        <h1 class="numsd">2: Booking & Creating Your Full Itinerary</h1>
+        <p class = "bodytut">The second and most crucial part of planning a trip is the booking process, and<br>actually detailing where you want to go in your set adventure. This involves choosing<br>and securing accommodations, transportation, and any activities or excursions you<br>want to experience. By meticulously organizing these elements, you can ensure a smooth<br>and enjoyable trip, avoiding last-minute stress and unexpected obstacles. It's important<br>to consider factors such as budget, timing, and personal preferences to tailor the trip to<br>your specific needs and desires </p>
+    <div class="resourcesnumlist">
+        <p class="listresources">Great Booking Resources:</p>
+        <ul class="bulleted-listresources">
+            <li><a href="https://www.expedia.com/">Expedia</a></li>
+            <li><a href="https://www.kayak.com/">Kayak</a></li>
+            <li><a href="https://www.google.com/travel/">Google Travel</a></li>
+            <li><a href="https://www.tripadvisor.com/">TripAdvisor</a></li>
+            <li><a href="https://www.booking.com/index.html?label=5-dorset-Ow3uLOV724WOmp9UGYFZMgS675873038048%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-2295285022018%3Alp9007476%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YfNeh-lbHkPZ0F1ArkOgkMs&sid=5e29e958a7a2f2a4710526082e15a8b5&gclid=Cj0KCQjwzby1BhCQARIsAJ_0t5N1ovs6LxvR5rAC5FyoHi_gbEYj2MnjR9SjHtprGAKt6WNSUhstAuUaAspkEALw_wcB&aid=311088">Booking.com</a></li>
+        </ul>
+</div>
+    <div class = "itinerarynumlist">
+        <p class="listitinerary">AI sites for Itinerary Generation</p>
+            <li><a href="https://chatgpt.com/">ChatGPT</a></li>
+            <li><a href="https://gemini.google.com/app?utm_source=google&utm_medium=cpc&utm_campaign=2024enUS_gemfeb&gad_source=1&gclid=Cj0KCQjwzby1BhCQARIsAJ_0t5O1_XVXHLbPueX22qDonK8vw-bljKty_lJu93uKSRC2xft1aInihekaAnfgEALw_wcB">Google Gemini</a></li>
+    </div>
+        <button id="backtips" class="backtipsdest">Back</button>
+    <script>
+        document.getElementById("backtips").onclick = function() {
+            window.location.href = "{{ url_for('tips') }}"
+        }
+    </script>
+    </body>
+{% endblock %}

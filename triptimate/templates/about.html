@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<body class = "bgcolor">
+    <p class="about">About</p>
+    <p class="robertoinfo">Hey I'm Roberto!</p>
+    <p class ="robertodesc">I'm an 18 year old high school senior based in Wilmington, Delaware.<br>I've traveled to many countries before including Greece (refer to the<br>photo), Italy, Spain, The Phillippines, and more! Though as I've<br>encountered in my travels, the budgeting can get quite expensive<br> if you aren't so considerate, so I've decided to develop a web app that<br> can solve that issue, in addition to climate change, a major global issue<br> in todays society that seems to keep getting worse as time goes on.<br> I hope you find this web application helpful both to your wallet, but also<br> to the environment!</p>
+    <img src ="{{ url_for('static', filename='assets/greecepic.jpg') }}" class = "greeceaboutpic">
+    <p class = "greecepicdesc">Posing in front of the Panathenaic Stadium in Athens, Greece</p>
+</body> 
+{% endblock %}

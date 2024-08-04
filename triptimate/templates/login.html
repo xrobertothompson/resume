@@ -1,0 +1,30 @@
+{% extends "layoutauth.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<div>
+    <form method="POST">
+        <button id="back" class="backbutton" type="button">Back</button>
+        <img src="{{ url_for('static', filename='assets/loginpic.png') }}" class="loginpic">
+        <p class="registertxt">LOGIN</p>
+        <p class="registerinfotxt">Welcome back, let's help plan your next eco-friendly adventure!</p>
+        <input type="email" name="email" class="regemail" placeholder="Email" required>
+        <input type="password" name="password" class="regpassword" placeholder="Password" required>
+        <button type="submit" id="loginnow" class="loginnowbutton">Login</button>
+    </form>
+    <p class="toregister">Don't have an Account?<span class="registerlink" id="toregisterpage"> Register Here.</span></p>
+    <script>
+        document.getElementById("back").onclick = function() {
+            window.location.href = "{{ url_for('index') }}"
+        }
+
+        document.getElementById("toregisterpage").onclick = function() {
+            window.location.href = "{{ url_for('register') }}"
+        }
+
+    </script>
+</div>
+{% endblock %}
