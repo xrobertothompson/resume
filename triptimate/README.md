@@ -1,0 +1,22 @@
+# Triptimate
+
+#### Video Demo: [URL HERE](https://youtu.be/uoB3uE_WLIM)
+
+#### Description:
+My final project, Triptimate, is a comprehensive web application aimed at promoting sustainable travel on a budget. This application is designed to help users generate personalized travel itineraries that are both eco-friendly and cost-effective. I utilized a range of technologies and tools to bring this project to life, ensuring that both the backend and frontend are robust and user-friendly.
+
+To develop Triptimate, I used Visual Studio Code (VS Code) as my integrated development environment (IDE). The backend of the application is managed using Flask, a lightweight Python web framework, which allows for efficient handling of web requests and interactions with the database. For data storage and management, I implemented SQLite3, a self-contained, serverless SQL database engine, which is ideal for applications like Triptimate that require a simple yet effective database solution.
+
+The primary backend script, `app.py`, handles all the server-side logic, including routing, data processing, and interaction with the SQLite database (`triptimate.db`). This database is the backbone of the application, storing crucial information such as user data, itineraries, and currency conversion rates. By structuring the data efficiently, Triptimate can quickly retrieve and present information to users, ensuring a seamless experience.
+
+On the frontend, I employed a combination of HTML, CSS, and JavaScript to create a visually appealing and interactive user interface. The application comprises several HTML templates, each serving a specific purpose within the site. Key templates include `about.html`, which provides information about the project and its goals; `create.html`, where users can input their travel preferences and generate itineraries; and `index.html`, the landing page that welcomes users to Triptimate.
+
+Styling the application involved the use of two main CSS stylesheets. These stylesheets ensure consistency across the different pages and enhance the overall aesthetic of the site. They handle everything from layout structure to color schemes, typography, and responsive design, making the application accessible on various devices. Additionally, some HTML templates, such as `layout.html`, include embedded JavaScript code. This JavaScript is crucial for enhancing user interaction, particularly for navigation between different tabs and dynamically updating content in certain sections, like the tips section of the project.
+
+To design the visual elements of Triptimate, I utilized Adobe Firefly and Figma. Adobe Firefly was instrumental in creating the application's logos, providing a professional and polished look that aligns with the project's theme of sustainable travel. Figma, a collaborative interface design tool, was used to create other assets and prototypes, ensuring a cohesive design language throughout the application.
+
+One of the standout features of Triptimate is its ability to provide users with travel tips and suggestions that are not only budget-friendly but also environmentally conscious. This is achieved through the integration of various APIs that provide real-time data on travel options, accommodation, activities, and environmental factors. By leveraging these APIs, Triptimate can offer users up-to-date information and recommendations tailored to their preferences and budget.
+
+The project also includes a detailed tips section, which is dynamically updated using JavaScript. This section offers practical advice on how to minimize the environmental impact of travel, such as choosing eco-friendly accommodations, opting for public transportation, and supporting local businesses. The JavaScript code embedded in the HTML templates ensures that this section is interactive and provides relevant tips based on the user's selected travel destinations and preferences.
+
+In conclusion, Triptimate represents a significant achievement in my journey as a developer. By combining various technologies and tools, I was able to create a web application that not only meets its functional requirements but also promotes a cause I am passionate about—sustainable travel. This project has allowed me to enhance my skills in web development, database management, and UI/UX design, and I am excited about the potential impact Triptimate can have on encouraging more people to travel responsibly and affordably.
